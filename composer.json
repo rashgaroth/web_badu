@@ -14,6 +14,7 @@
         "guzzlehttp/guzzle": "^6.3",
         "laravel/framework": "^7.24",
         "laravel/tinker": "^2.0",
+        "lorisleiva/laravel-deployer": "^0.3.5",
         "netojose/laravel-bootstrap-4-forms": "^3.0",
         "uxweb/sweet-alert": "^2.0"
     },
