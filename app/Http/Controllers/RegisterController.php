@@ -28,6 +28,7 @@ class RegisterController extends Controller
             'ig_pemilik',
             'no_rek' => 'required',
             'nama_bank' => 'required',
+            // foto
             'foto_ktp' => 'required',
         ]);
         

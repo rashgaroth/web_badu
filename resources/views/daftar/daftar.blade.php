@@ -1,4 +1,4 @@
-@extends('daftar.common.nav_template')
+@extends('daftar.common.daftar_template')
 @section('title','Daftar')
 @section('daftar')
     @component('daftar.component.welcome_banner')

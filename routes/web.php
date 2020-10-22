@@ -24,3 +24,4 @@ Route::get('home', function () {
 
 Route::get('register', 'RegisterController@register');
 Route::post('register/regist_mitra', 'RegisterController@registMitra');
+Route::get('alert/{AlertType}', 'RegisterController@register')->name('alert');

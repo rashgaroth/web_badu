@@ -1,6 +1,6 @@
 
-{!!Form::open((['url' => '/register/regist_mitra', 'class' => 'form-horizontal']))!!}
-@csrf
+{!!Form::open((['url' => '/register/regist_mitra', 'class' => 'form-horizontal']))->put()!!}
+{{ csrf_field() }}
 <div class="container">
     <h3><b>Validasi Umum</b></h3>
     {!!Form::text('nama_pemilik', 'Nama Pemilik')->placeholder('M. Syarifudin')->sm()->required()!!}
@@ -39,24 +39,36 @@
     <h3><b>Data diri</b></h3>
     {{-- KTP --}}
     <h5><b>Foto KTP</b></h5>
-    <input type="file" name="foto_ktp" onchange="readUrlKtp(this);">
-    <br>
-    <img src="" alt="" id="foto_ktp">
-    <br>
+    <div class="col container">
+    <div class="col-lg m-5">
+        <input type="file" name="foto_ktp" onchange="readUrlKtp(this);">
+        <img src="" alt="" id="foto_ktp">
+    </div>
+   </div>
     {{-- Selfie dengan KTP --}}
     <h5><b>Selfie dengan KTP</b></h5>
-    <input type="file" name="foto_selfie" onchange="readUrlSelfie(this);">
-    <br>
-    <img src="" alt="" id="foto_selfie">
-    <br>
+    <div class="col container">
+    <div class="col-lg m-5">
+        <input type="file" name="foto_selfie" onchange="readUrlSelfie(this);">
+        <img src="" alt="" id="foto_selfie">
+    </div>
+   </div>
     {{-- Foto Lapangan Usaha --}}
     <h5><b>Foto Lapangan Usaha</b></h5>
-    <input type="file" name="foto_lapangan_1" onchange="readUrlLapangan1(this);">
-    <img src="" alt="" id="foto_lapangan_1">
-    <input type="file" name="foto_lapangan_2" onchange="readUrlLapangan2(this);">
-    <img src="" alt="" id="foto_lapangan_2">
-    <input type="file" name="foto_lapangan_3" onchange="readUrlLapangan3(this);">
-    <img src="" alt="" id="foto_lapangan_3">
+<div class="col container">
+    <div class="col-lg m-5">
+        <input type="file" name="foto_lapangan_1" onchange="readUrlLapangan1(this);">
+        <img src="" alt="" id="foto_lapangan_1">
+    </div>
+    <div class="col-lg m-5">
+        <input type="file" name="foto_lapangan_2" onchange="readUrlLapangan2(this);">
+        <img src="" alt="" id="foto_lapangan_2">
+    </div>
+    <div class="col-lg m-5">
+        <input type="file" name="foto_lapangan_3" onchange="readUrlLapangan3(this);">
+        <img src="" alt="" id="foto_lapangan_3">
+    </div>
+</div>
     <br>
     {{-- Foto NPWP --}}
     <h3><b>Foto NPWP (Opsional)</b></h3>
@@ -75,11 +87,17 @@
     {!!Form::select('cctv', 'CCTV')->options($fasilitas)!!}
     {{-- Submit Button --}}
     {!!Form::submit('Daftar Sekarang')->id('my-btn')->primary()->sm()!!}
+    <a href="{{ route('alert','success')}}">success alert</a>
     <br><br><br>
 </div>
     {!!Form::close()!!}
 
+<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@7.12.15/dist/sweetalert2.all.min.js"></script>
+<link rel='stylesheet' href='https://cdn.jsdelivr.net/npm/sweetalert2@7.12.15/dist/sweetalert2.min.css'>
+
 <script type="text/javascript">
+
     function readUrlKtp(input) {
             if (input.files && input.files[0]) {
                 var reader = new FileReader();
