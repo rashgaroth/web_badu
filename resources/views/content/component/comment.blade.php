@@ -18,6 +18,16 @@
                         </div>
                     </div>
                     <!-- End single people -->
+                                        <div class="single-people text-center">
+                        <div class="people-say-image">
+                            <img src="{{asset('/images/voulenteer/roy.jpg')}}" alt="">
+                        </div>
+                        <div class="peoplp-say-text text-center">
+                            <p>Lorem ipsum dolor sit amet, con sectetur adipiscing elit. Vestibulum varius semper ligula, et molestie metus.</p>
+                            <h5>Zafari Jamith</h5>
+                            <h6>Director</h6>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>

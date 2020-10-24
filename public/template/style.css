@@ -1120,7 +1120,6 @@ h1.title1 {
 .people-says-area {
   background: rgba(0, 0, 0, 0) url("../images/banner/peopleSay.png") repeat scroll 0 0 / cover;
 }
-
 .single-people {
   margin: auto;
   width: 55%;
@@ -2685,6 +2684,11 @@ h1.title1 {
 
 .hiro-unit-area {
   background: rgba(0, 0, 0, 0) url("../images/banner/peopleSay.png") repeat fixed 0 0;
+  color: rgb(255, 255, 255);
+}
+
+.hiro-unit-area-form {
+  background: rgb(255, 255, 255) repeat fixed 0 0;
   color: rgb(255, 255, 255);
 }
 

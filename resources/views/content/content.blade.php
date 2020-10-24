@@ -105,17 +105,17 @@ $pic_sasa = asset('/images/voulenteer/sasa.png');
     {{$pic_dwiyan}}
     @endslot
     @slot('name_2')
-    Dwiyan Putra
+    Ferdi Azis
     @endslot
     @slot('as_2')
-    Software Developer
+    Chief Marketing Officer
     @endslot
 
     @slot('foto_3')
     {{$pic_sasa}}
     @endslot
     @slot('name_3')
-    Anisa Rahmatanti
+    Nurul Amanda Putri
     @endslot
     @slot('as_3')
     Chief Financial Officer
